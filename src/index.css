@@ -38,6 +38,10 @@
 	.alkali {
 		@apply border-alkali text-alkali
 	}
+
+	.alkaline {
+		@apply border-alkaline text-alkaline
+	}
 	
 	.nonmetal {
 		@apply border-nonmetal text-nonmetal
@@ -53,6 +57,10 @@
 
 .alkali-text-shadow {
 	text-shadow: 0 0 10px #B8964A
+}
+
+.alkaline-text-shadow {
+	text-shadow: 0 0 10px #BFC94C
 }
 
 .nonmetal-text-shadow {

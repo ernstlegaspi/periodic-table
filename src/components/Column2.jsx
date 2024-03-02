@@ -2,12 +2,11 @@ import Element from './Element'
 
 export default function Column1() {
 	return <div className='absolute ml-[118px]'>
-		<Element color='alkali alkali-text-shadow' mass='6.94' name='Lithium' number='3' symbol='Li' top='mt-[118px]' />
-		<Element color='alkali alkali-text-shadow' mass='22.99' name='Sodium' number='11' symbol='Na' top='mt-[236px]' />
-		<Element color='alkali alkali-text-shadow' mass='39.098' name='Potassium' number='19' symbol='K' top='mt-[354px]' />
-		<Element color='alkali alkali-text-shadow' mass='85.468' name='Rubidium' number='37' symbol='Rb' top='mt-[472px]' />
-		<Element color='alkali alkali-text-shadow' mass='132.91' name='Caesium' number='55' symbol='Cs' top='mt-[590px]' />
-		<Element color='alkali alkali-text-shadow' mass='223' name='Francium' number='87' symbol='Fr' top='mt-[708px]' />
-		<Element color='alkali alkali-text-shadow' mass='223' name='Francium' number='87' symbol='Fr' top='mt-[826px]' />
+		<Element color='alkaline alkaline-text-shadow' mass='9.0122' name='Beryllium' number='4' symbol='Be' top='mt-[118px]' />
+		<Element color='alkaline alkaline-text-shadow' mass='24.305' name='Magnesium' number='12' symbol='Mg' top='mt-[236px]' />
+		<Element color='alkaline alkaline-text-shadow' mass='40.078' name='Calcium' number='20' symbol='Ca' top='mt-[354px]' />
+		<Element color='alkaline alkaline-text-shadow' mass='87.62' name='Strontium' number='38' symbol='Sr' top='mt-[472px]' />
+		<Element color='alkaline alkaline-text-shadow' mass='137.33' name='Barium' number='56' symbol='Ba' top='mt-[590px]' />
+		<Element color='alkaline alkaline-text-shadow' mass='226' name='Radium' number='88' symbol='Ra' top='mt-[708px]' />
 	</div>
 }

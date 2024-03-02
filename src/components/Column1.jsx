@@ -9,6 +9,5 @@ export default function Column1() {
 		<Element color='alkali alkali-text-shadow' mass='85.468' name='Rubidium' number='37' symbol='Rb' top='mt-[472px]' />
 		<Element color='alkali alkali-text-shadow' mass='132.91' name='Caesium' number='55' symbol='Cs' top='mt-[590px]' />
 		<Element color='alkali alkali-text-shadow' mass='223' name='Francium' number='87' symbol='Fr' top='mt-[708px]' />
-		<Element color='alkali alkali-text-shadow' mass='223' name='Francium' number='87' symbol='Fr' top='mt-[826px]' />
 	</>
 }

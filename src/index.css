@@ -1,68 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	--alkali: #B8964A;
+	--alkaline: #BFC94C;
+	--lanthanoid: #CB688F;
+	--aktinoid: #A270A9;
+	--t-metal: #A45950;
+	--post-metal: #43BFD3;
+	--metalloid: #2FB48C;
+	--nonmetal: #40B34D;
+	--gas: #5472B5;
+	--u: #B0B1B2;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+* {
+	margin: 0;
+	padding: 0
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+@layer utilities {
+	.f {
+		@apply flex
+	}
+
+	.f-center {
+		@apply flex items-center justify-center
+	}
+
+	.pointer {
+		@apply cursor-pointer
+	}
+
+	/* ELEMENTS */
+
+	.alkali {
+		@apply border-alkali text-alkali
+	}
+	
+	.nonmetal {
+		@apply border-nonmetal text-nonmetal
+	}
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.app {
+	max-width: 1920px;
+	margin: 0 auto;
+	background: #101318;
+	height: 100vh;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.alkali-text-shadow {
+	text-shadow: 0 0 10px #B8964A
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.nonmetal-text-shadow {
+	text-shadow: 0 0 10px #40B34D
+}
+
+.element {
+	transition: all .15s;
+}
+
+.element:hover {
+	width: 150px;
+	height: 150px;
+	z-index: 10;
+	transform: translate(-18px, -18px)
+}
+
+::-webkit-scrollbar {
+	width: 5px
+}
+
+::-webkit-scrollbar-thumb {
+	background: #B8964A
 }

@@ -33,13 +33,25 @@
 	.alkaline {
 		@apply border-alkaline text-alkaline
 	}
+
+	.gas {
+		@apply border-gas text-gas
+	}
 	
 	.lanthanoid {
 		@apply border-lanthanoid text-lanthanoid
 	}
+
+	.metalloid {
+		@apply border-metalloid text-metalloid
+	}
 	
 	.nonmetal {
 		@apply border-nonmetal text-nonmetal
+	}
+
+	.post-metal {
+		@apply border-post-metal text-post-metal
 	}
 
 	.t-metal {
@@ -70,8 +82,16 @@
 	text-shadow: 0 0 10px #BFC94C
 }
 
+.gas-text-shadow {
+	text-shadow: 0 0 10px #5472B5
+}
+
 .lanthanoid-text-shadow {
 	text-shadow: 0 0 10px #CB688F
+}
+
+.metalloid-text-shadow {
+	text-shadow: 0 0 10px #40B34D
 }
 
 .nonmetal-text-shadow {
@@ -79,6 +99,10 @@
 }
 
 .t-metal-text-shadow {
+	text-shadow: 0 0 10px #A45950
+}
+
+.post-metal-text-shadow {
 	text-shadow: 0 0 10px #A45950
 }
 
@@ -91,10 +115,10 @@
 }
 
 .element:hover {
-	width: 150px;
-	height: 150px;
+	width: 120px;
+	height: 120px;
 	z-index: 10;
-	transform: translate(-18px, -18px)
+	transform: translate(-10px, -10px)
 }
 
 ::-webkit-scrollbar {

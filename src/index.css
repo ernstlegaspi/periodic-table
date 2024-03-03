@@ -2,19 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-	--alkali: #B8964A;
-	--alkaline: #BFC94C;
-	--lanthanoid: #CB688F;
-	--aktinoid: #A270A9;
-	--t-metal: #A45950;
-	--post-metal: #43BFD3;
-	--metalloid: #2FB48C;
-	--nonmetal: #40B34D;
-	--gas: #5472B5;
-	--u: #B0B1B2;
-}
-
 * {
 	margin: 0;
 	padding: 0
@@ -35,6 +22,10 @@
 
 	/* ELEMENTS */
 
+	.aktinoid {
+		@apply border-aktinoid text-aktinoid
+	}
+	
 	.alkali {
 		@apply border-alkali text-alkali
 	}
@@ -43,8 +34,20 @@
 		@apply border-alkaline text-alkaline
 	}
 	
+	.lanthanoid {
+		@apply border-lanthanoid text-lanthanoid
+	}
+	
 	.nonmetal {
 		@apply border-nonmetal text-nonmetal
+	}
+
+	.t-metal {
+		@apply border-t-metal text-t-metal
+	}
+
+	.u {
+		@apply border-u text-u
 	}
 }
 
@@ -55,6 +58,10 @@
 	height: 100vh;
 }
 
+.aktinoid-text-shadow {
+	text-shadow: 0 0 10px #A270A9
+}
+
 .alkali-text-shadow {
 	text-shadow: 0 0 10px #B8964A
 }
@@ -63,8 +70,20 @@
 	text-shadow: 0 0 10px #BFC94C
 }
 
+.lanthanoid-text-shadow {
+	text-shadow: 0 0 10px #CB688F
+}
+
 .nonmetal-text-shadow {
 	text-shadow: 0 0 10px #40B34D
+}
+
+.t-metal-text-shadow {
+	text-shadow: 0 0 10px #A45950
+}
+
+.u-text-shadow {
+	text-shadow: 0 0 10px #B0B1B2
 }
 
 .element {

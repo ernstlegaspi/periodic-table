@@ -1,6 +1,6 @@
 import Element from './Element'
 
-export default function Column2() {
+export default function Column13() {
 	return <div className='absolute ml-[118px]'>
 		<Element color='alkaline alkaline-text-shadow' mass='9.0122' name='Beryllium' number='4' symbol='Be' top='mt-[118px]' />
 		<Element color='alkaline alkaline-text-shadow' mass='24.305' name='Magnesium' number='12' symbol='Mg' top='mt-[236px]' />

@@ -34,8 +34,8 @@
 		@apply border-alkaline text-alkaline
 	}
 
-	.gas {
-		@apply border-gas text-gas
+	.noble-gas {
+		@apply border-noble-gas text-noble-gas
 	}
 	
 	.lanthanoid {
@@ -54,12 +54,16 @@
 		@apply border-post-metal text-post-metal
 	}
 
-	.t-metal {
-		@apply border-t-metal text-t-metal
+	.transition-metal {
+		@apply border-transition-metal text-transition-metal
 	}
 
-	.u {
-		@apply border-u text-u
+	.unknown {
+		@apply border-unknown text-unknown
+	}
+
+	.w {
+		@apply w-full
 	}
 }
 
@@ -82,7 +86,7 @@
 	text-shadow: 0 0 10px #BFC94C
 }
 
-.gas-text-shadow {
+.noble-gas-text-shadow {
 	text-shadow: 0 0 10px #5472B5
 }
 
@@ -98,7 +102,7 @@
 	text-shadow: 0 0 10px #40B34D
 }
 
-.t-metal-text-shadow {
+.transition-metal-text-shadow {
 	text-shadow: 0 0 10px #A45950
 }
 
@@ -106,7 +110,7 @@
 	text-shadow: 0 0 10px #A45950
 }
 
-.u-text-shadow {
+.unknown-text-shadow {
 	text-shadow: 0 0 10px #B0B1B2
 }
 

@@ -11,12 +11,12 @@ export default {
 				'alkaline': '#BFC94C',
 				'lanthanoid': '#CB688F',
 				'aktinoid': '#A270A9',
-				't-metal': '#A45950',
+				'transition-metal': '#A45950',
 				'post-metal': '#43BFD3',
 				'metalloid': '#2FB48C',
 				'nonmetal': '#40B34D',
-				'gas': '#5472B5',
-				'u': '#B0B1B2'
+				'noble-gas': '#5472B5',
+				'unknown': '#B0B1B2'
 			}
 		},
 	},

@@ -2,6 +2,7 @@ import { memo } from 'react'
 
 import useActiveElementHovered from '../state/activeElementHovered'
 import useCurrentElement from '../state/currentElement'
+import useFilteredElements from '../state/filteredElements'
 
 const Element = ({
 	color,
@@ -12,25 +13,42 @@ const Element = ({
 	symbol,
 	top
 }) => {
-	const { currentElement, setCurrentElement } = useCurrentElement()
 	const { setActiveElementHovered } = useActiveElementHovered()
+	const { currentElement, setCurrentElement } = useCurrentElement()
+	const { filteredElements } = useFilteredElements()
 	const isActive = currentElement === name
 	const mainColor = {
 		'alkali': 'bg-[#B8964A]',
 		'alkaline': 'bg-[#BFC94C]',
 		'lanthanoid': 'bg-[#CB688F]',
 		'aktinoid': 'bg-[#A270A9]',
-		't-metal': 'bg-[#A45950]',
+		'transition-metal': 'bg-[#A45950]',
 		'post-metal': 'bg-[#43BFD3]',
 		'metalloid': 'bg-[#2FB48C]',
 		'nonmetal': 'bg-[#40B34D]',
-		'gas': 'bg-[#5472B5]',
-		'u': 'bg-[#B0B1B2]'
+		'noble-gas': 'bg-[#5472B5]',
+		'unknown': 'bg-[#B0B1B2]'
 	}
-	const currentColor = mainColor[color.split(' ')[0]]
+
+	const mainElement = {
+		'alkali': 'alkali metals',
+		'alkaline': 'alkaline earth metals',
+		'lanthanoid': 'lanthanoids metals',
+		'aktinoid': 'aktinoids metals',
+		'transition-metal': 'transition metals',
+		'post-metal': 'post transition metals',
+		'metalloid': 'metalloid',
+		'nonmetal': 'other nonmetals',
+		'noble-gas': 'noble gasses',
+		'unknown': 'unknown'
+	}
+	
+	const elementColor = color.split(' ')[0]
+	const currentColor = mainColor[elementColor]
+	const isFilteredElement = mainElement[elementColor] === filteredElements
 
 	const handleClick = () => {
-		if(name === 'n/a') return
+		if(name === 'n/a' || !isFilteredElement) return
 
 		setCurrentElement(name)
 	}
@@ -40,8 +58,8 @@ const Element = ({
 		onMouseEnter={() => setActiveElementHovered(true)}
 		onMouseLeave={() => setActiveElementHovered(false)}
 		className={`
-			${isActive ? 'w-[150px] h-[150px] z-10 translate-x-[-25px] translate-y-[-25px]' : notHoverable ? '' : 'element pointer'}
-			${color} ${top}
+			${isActive ? 'w-[150px] h-[150px] z-10 translate-x-[-25px] translate-y-[-25px]' : notHoverable || !isFilteredElement ? 'select-none' : 'element pointer'}
+			${isFilteredElement || !filteredElements ? color : `${color} opacity-5`} ${top}
 			z-0 h-[100px] w-[100px] border-2 absolute f flex-col bg-[#101318]
 			transition-all duration-150
 		`}

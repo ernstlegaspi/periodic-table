@@ -13,7 +13,7 @@ export default function App() {
 		setCurrentElement('')
 	}
 	
-	return <div className='app overflow-y-scroll'>
+	return <div className='app overflow-scroll relative'>
 		<Elements />
 		<Filters />
 		<div onClick={handleClick} className={`${currentElement ? 'ml-0' : 'ml-[2000px]'} transition-all bg-black/50 inset-0 z-60 fixed`}></div>

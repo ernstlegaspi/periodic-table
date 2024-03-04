@@ -1,11 +1,17 @@
 import useFilteredElements from "../state/filteredElements"
 
 export default function Filters() {
-	const { setFilteredElements } = useFilteredElements()
+	const { filteredElements, setFilteredElements } = useFilteredElements()
 
-	const Filter = ({ color, label, margin }) => <p onClick={() => setFilteredElements(label.toLowerCase())} className={`${color} ${margin} pointer`}>{label}</p>
+	const Filter = ({ color, label, margin }) => {
+		const handleClick = () => {
+			setFilteredElements(filteredElements === label.toLowerCase() ? '' : label.toLowerCase())
+		}
+		
+		return <p onClick={handleClick} className={`${color} ${margin} pointer`}>{label}</p>
+	}
 
-	return <div className='absolute w left-1/2 translate-x-[-50%] f-center'>
+	return <div className='absolute w-[1500px] ml-[200px] f-center'>
 		<Filter color='alkali alkali-text-shadow' label='Alkali Metals' margin='mr-6' />
 		<Filter color='alkaline alkaline-text-shadow' label='Alkaline Earth Metals' margin='mr-6' />
 		<Filter color='lanthanoid lanthanoid-text-shadow' label='Lanthanoids Metals' margin='mr-6' />

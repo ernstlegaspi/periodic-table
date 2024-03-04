@@ -48,7 +48,7 @@ const Element = ({
 	const isFilteredElement = mainElement[elementColor] === filteredElements
 
 	const handleClick = () => {
-		if(name === 'n/a' || !isFilteredElement) return
+		if(name === 'n/a' || (!isFilteredElement && filteredElements)) return
 
 		setCurrentElement(name)
 	}
@@ -58,7 +58,7 @@ const Element = ({
 		onMouseEnter={() => setActiveElementHovered(true)}
 		onMouseLeave={() => setActiveElementHovered(false)}
 		className={`
-			${isActive ? 'w-[150px] h-[150px] z-10 translate-x-[-25px] translate-y-[-25px]' : notHoverable || !isFilteredElement ? 'select-none' : 'element pointer'}
+			${isActive ? 'w-[150px] h-[150px] z-10 translate-x-[-25px] translate-y-[-25px]' : notHoverable || (!isFilteredElement && filteredElements) ? 'select-none' : 'element pointer'}
 			${isFilteredElement || !filteredElements ? color : `${color} opacity-5`} ${top}
 			z-0 h-[100px] w-[100px] border-2 absolute f flex-col bg-[#101318]
 			transition-all duration-150

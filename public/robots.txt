@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+Disallow: /sitemap.xml
+
+Sitemap: https://ernstlegaspi-periodic-table.vercel.app/sitemap.xml
